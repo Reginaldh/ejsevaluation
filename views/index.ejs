@@ -1,0 +1,26 @@
+<%- include('partials/header') -%>
+
+<header><h3>Eje Evaluation</h3></header>
+
+<main>
+  <div class="left">
+      <div>
+          <p class="label">Quantity</p>
+          <input type="number" class="type" placeholder=" TypeHere" />
+      </div>
+  </div>
+  <div class="right">
+  </div>
+</main>
+<script>
+    document.querySelector(".type").addEventListener('change',(e)=>{
+        let content = ""
+        for(let i = 0; i < parseInt(e.target.value);i++){
+            content += `<div class="card"><span>${i + 1}</span></div>`
+        }
+        document.querySelector(".right").innerHTML=content
+
+    })
+</script>
+
+<%- include('partials/footer') -%>
